@@ -1,0 +1,28 @@
+{
+  "name": "RTL | ⅃TЯ",
+  "description" : "Automate the creation of RTL layouts of your designs.",
+  "author" : "Devin Mancuso",
+  "authorEmail" : "devin@radelaide.net",
+  "homepage": "https://github.com/devinmancuso/sketch-rtl/#readme",
+  "version" : "1.0",
+  "identifier" : "com.devinmancuso.sketch-rtl-plugin",
+  "compatibleVersion": "4.3",
+  "bundleVersion": "1",
+  "commands" : [
+    {
+      "name" : "RTL | ⅃TЯ",
+      "script" : "src/functions.js",
+      "handler" : "rtl",
+      "shortcut" : "cmd shift f",      
+      "identifier" : "rtl"
+    },             
+  ],
+  "menu":
+    {
+      "items":
+      [
+        "rtl"
+      ],
+      "isRoot": true
+    }
+}

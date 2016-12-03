@@ -56,6 +56,8 @@ var rtl = function(context) {
 
 			var allArtboards = context.document.currentPage().artboards();
 
+			var gutter = 100;
+
 			for (var j = 0; j < allArtboards.count(); j++) {
 
 				var artboard = allArtboards[j];
@@ -63,7 +65,7 @@ var rtl = function(context) {
 				if (artboard != selectedArtboard) {
 
 					if (artboard.frame().y() == selectedArtboard.frame().y() && artboard.frame().x() > selectedArtboard.frame().x()) {
-						var gutter = 100;
+						
 						artboard.frame().setX(artboard.frame().x() + artW + gutter);
 					}
 

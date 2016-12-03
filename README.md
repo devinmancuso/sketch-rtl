@@ -1,5 +1,4 @@
 #RTL | ⅃TЯ Sketch Plugin#
-=============
 
 ##Installation
 

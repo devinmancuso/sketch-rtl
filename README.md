@@ -1,5 +1,11 @@
 #RTL | ⅃TЯ Sketch Plugin#
 
+Designs that include text written in right-to-left languages are often rendered incorrectly.
+
+This happens because some design tools don’t support proper RTL rendering. The result is often embarrassingly illegible gibberish masquerading as Hebrew, Arabic, or Persian text that defeats the purpose of connecting with those audiences. Unless you speak those languages, the mistakes might be hard to spot.
+
+This Sketch plugin takes your designs and automatically creates RTL layouts on new artboards. This should speed up the process of creating RTL designs and improve RTL consistency across your designs.
+
 ##Installation
 
 Simply download the zipped plugin, extract it, and double-click to quickly install. This will add a new menu option under Plugins and a new shortcut: ⌘ + Shift + F

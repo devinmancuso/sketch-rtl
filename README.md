@@ -8,7 +8,7 @@ This Sketch plugin takes your designs and automatically creates RTL layouts on n
 
 ##Installation
 
-Simply download the zipped plugin, extract it, and double-click to quickly install. This will add a new menu option under Plugins and a new shortcut: ⌘ + Shift + F
+Simply [download the zipped plugin](https://github.com/devinmancuso/sketch-rtl/releases/download/1.0.0/sketch-rtl-1.0.0.zip), extract it, and double-click to quickly install. This will add a new menu option under Plugins and a new shortcut: ⌘ + Shift + F
 
 There is a demo file included in the zipped directory which you can experiment with. 
 

@@ -6,6 +6,10 @@ This happens because some design tools don’t support proper RTL rendering. The
 
 This Sketch plugin takes your designs and automatically creates RTL layouts on new artboards. This should speed up the process of creating RTL designs and improve RTL consistency across your designs.
 
+![example gif](https://cloud.githubusercontent.com/assets/1478273/22186906/4eef3732-e0b2-11e6-808e-1c90dd1c4adb.gif "Example gif")
+
+
+
 ##Installation
 
 Simply [download the zipped plugin](https://github.com/devinmancuso/sketch-rtl/releases/download/1.0.0/sketch-rtl-1.0.0.zip), extract it, and double-click to quickly install. This will add a new menu option under Plugins and a new shortcut: ⌘ + Shift + F

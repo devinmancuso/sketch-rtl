@@ -6,9 +6,7 @@ This happens because some design tools don’t support proper RTL rendering. The
 
 This Sketch plugin takes your designs and automatically creates RTL layouts on new artboards. This should speed up the process of creating RTL designs and improve RTL consistency across your designs.
 
-![example gif](https://cloud.githubusercontent.com/assets/1478273/22186906/4eef3732-e0b2-11e6-808e-1c90dd1c4adb.gif "Example gif")
-
-
+![example gif](https://cloud.githubusercontent.com/assets/1478273/22186956/fdd78c90-e0b2-11e6-8db7-ffccb17b7a61.gif "Example gif")
 
 ##Installation
 

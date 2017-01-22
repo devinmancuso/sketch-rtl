@@ -21,7 +21,10 @@ var rtl = function(context) {
 	var selection = context.selection;
 	var count = selection.count();
 
-	var localSelection = Array.from(selection);
+	log("Running RTL v" + context.plugin.version() + "");
+
+	//var localSelection = Array.from(selection); //breaking in sketch41
+	var localSelection = selection;
 	var localCount = localSelection.length;
 
 	if (localCount == 0) {

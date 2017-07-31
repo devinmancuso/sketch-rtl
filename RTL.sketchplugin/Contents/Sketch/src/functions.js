@@ -51,10 +51,6 @@ var rtl = function(context) {
 
 			//log("Selected artboard is currently: " + selectedArtboard);
 
-			context.document.currentPage().deselectAllLayers();
-
-			selectedArtboard.setIsSelected(true);
-
 			var artW = selectedArtboard.frame().width();
 
 			var allArtboards = context.document.currentPage().artboards();
@@ -76,14 +72,14 @@ var rtl = function(context) {
 
 			}
 
-			selectedArtboard.setIsSelected(false);        
+			selectedArtboard.deselectLayerAndParent();
 			selectedArtboard.duplicate();
 			selectedArtboard.frame().setX(selectedArtboard.frame().x() + selectedArtboard.frame().width() + gutter);
 
 			var artName = selectedArtboard.name();
 			selectedArtboard.setName( artName + "_rtl");
 
-			selectedArtboard.setIsSelected(false);
+			selectedArtboard.deselectLayerAndParent();
 
 			check_layers([layer layers], ht);
 

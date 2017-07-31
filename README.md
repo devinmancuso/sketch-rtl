@@ -1,4 +1,4 @@
-#RTL | ⅃TЯ Sketch Plugin#
+# RTL | ⅃TЯ Sketch Plugin#
 
 Designs that include text written in right-to-left languages are often rendered incorrectly.
 
@@ -8,17 +8,17 @@ This Sketch plugin takes your designs and automatically creates RTL layouts on n
 
 ![example gif](https://cloud.githubusercontent.com/assets/1478273/22186956/fdd78c90-e0b2-11e6-8db7-ffccb17b7a61.gif "Example gif")
 
-##Installation
+## Installation
 
 Simply [download the zipped plugin](https://github.com/devinmancuso/sketch-rtl/releases/download/1.0.0/sketch-rtl-1.0.0.zip), extract it, and double-click to quickly install. This will add a new menu option under Plugins and a new shortcut: ⌘ + Shift + F
 
 There is a demo file included in the zipped directory which you can experiment with. 
 
-##Usage
+## Usage
 
 Select one or more artboards and then press ⌘ + Shift + F or select RTL | ⅃TЯ from the plugin menu.
 
-##Features
+## Features
 
 At present the RTL plugin has the following features:
 
@@ -30,7 +30,7 @@ At present the RTL plugin has the following features:
 
 * Detect icon-font and SVG material icons that should be mirrored in RTL
 
-##Flipping Icons
+## Flipping Icons
 
 The plugin includes a hashtable of icons which should be flipped in RTL mode. Using this it is able to guess at when an icon should be flipped.
 

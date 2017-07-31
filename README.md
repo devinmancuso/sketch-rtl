@@ -40,7 +40,7 @@ Currently the plugin only supports icon flipping for SVG and material-icon-font
 
 * For material-icon-font it gets the value of the TextElement (not the name of the text layer) and attempts to match that to the list in the hashtable.
 
-##Known issues
+## Known issues
 
 * An empty groupLayer with the naming convention of an SVG e.g. ic_reply_black_24dp seems to cause the plugin to stop running for the current artboard.
 

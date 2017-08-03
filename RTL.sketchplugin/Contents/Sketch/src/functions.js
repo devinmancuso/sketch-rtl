@@ -51,6 +51,18 @@ var rtl = function(context) {
 
 			//log("Selected artboard is currently: " + selectedArtboard);
 
+			if(context.document.currentPage().deselectAllLayers){
+			    context.document.currentPage().deselectAllLayers();
+			}else{
+			    context.document.currentPage().changeSelectionBySelectingLayers_([]);
+			}
+
+			if (MSApplicationMetadata.metadata().appVersion > 45) {
+			    selectedArtboard.select_byExpandingSelection(true, true);
+			} else {
+			    selectedArtboard.select_byExtendingSelection(true, true);
+			}
+
 			var artW = selectedArtboard.frame().width();
 
 			var allArtboards = context.document.currentPage().artboards();

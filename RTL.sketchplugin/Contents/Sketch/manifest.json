@@ -7,7 +7,7 @@
   "version" : "1.0.3",
   "identifier" : "com.devinmancuso.sketch-rtl-plugin",
   "compatibleVersion": "45",
-  "appcast": "https://raw.githubusercontent.com/devinmancuso/sketch-rtl/sketch-45-appcast/appcast.xml",
+  "appcast": "https://raw.githubusercontent.com/devinmancuso/sketch-rtl/master/appcast.xml",
   "bundleVersion": "1",
   "commands" : [
     {

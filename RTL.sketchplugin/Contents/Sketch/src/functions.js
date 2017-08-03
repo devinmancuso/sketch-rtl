@@ -51,9 +51,17 @@ var rtl = function(context) {
 
 			//log("Selected artboard is currently: " + selectedArtboard);
 
-			context.document.currentPage().deselectAllLayers();
+			if(context.document.currentPage().deselectAllLayers){
+			    context.document.currentPage().deselectAllLayers();
+			}else{
+			    context.document.currentPage().changeSelectionBySelectingLayers_([]);
+			}
 
-			selectedArtboard.setIsSelected(true);
+			if (MSApplicationMetadata.metadata().appVersion > 45) {
+			    selectedArtboard.select_byExpandingSelection(true, true);
+			} else {
+			    selectedArtboard.select_byExtendingSelection(true, true);
+			}
 
 			var artW = selectedArtboard.frame().width();
 
@@ -76,14 +84,14 @@ var rtl = function(context) {
 
 			}
 
-			selectedArtboard.setIsSelected(false);        
+			selectedArtboard.deselectLayerAndParent();
 			selectedArtboard.duplicate();
 			selectedArtboard.frame().setX(selectedArtboard.frame().x() + selectedArtboard.frame().width() + gutter);
 
 			var artName = selectedArtboard.name();
 			selectedArtboard.setName( artName + "_rtl");
 
-			selectedArtboard.setIsSelected(false);
+			selectedArtboard.deselectLayerAndParent();
 
 			check_layers([layer layers], ht);
 

@@ -4,9 +4,10 @@
   "author" : "Devin Mancuso",
   "authorEmail" : "devin@radelaide.net",
   "homepage": "https://github.com/devinmancuso/sketch-rtl/#readme",
-  "version" : "1.0.2",
+  "version" : "1.0.3",
   "identifier" : "com.devinmancuso.sketch-rtl-plugin",
   "compatibleVersion": "45",
+  "appcast": "https://raw.githubusercontent.com/devinmancuso/sketch-rtl/master/appcast.xml",
   "bundleVersion": "1",
   "commands" : [
     {

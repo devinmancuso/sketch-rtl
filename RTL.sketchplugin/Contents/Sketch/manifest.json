@@ -16,7 +16,7 @@
       "handler" : "rtl",
       "shortcut" : "cmd shift f",      
       "identifier" : "rtl"
-    },             
+    }
   ],
   "menu":
     {

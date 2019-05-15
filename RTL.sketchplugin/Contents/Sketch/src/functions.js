@@ -15,8 +15,10 @@
  */
 
 @import 'icons.js'
+const sketch = require('sketch')
 
 var rtl = function(context) {
+
 
 	var selection = context.selection;
 	var count = selection.count();
@@ -36,8 +38,7 @@ var rtl = function(context) {
 		for (var i=0; i < localCount; i++) {
 			
 			if (check_if_artboard(localSelection[i]) == 0) {
-				
-				context.document.showMessage("Something other than an artboard was selected. Please select only artboards.");
+				context.document.showMessage("Something other than an artboard or symbol was selected. Please select only artboards and symbols.");
 				return;
 
 			}
@@ -113,7 +114,7 @@ function check_layers(layers, ht){
 		var artX = artboardFrame.x();
 		var artW = artboardFrame.width();
 
-		if (layerClass == "MSShapeGroup") {
+		if (layerClass == "MSShapeGroup" || layerClass == "MSRectangleShape" || layerClass == "MSOvalShape") {
 		  
 			//log("Found layer " + layerName + " of class: " + layerClass)
 			rtl_move(layer, artX, artW);
@@ -163,7 +164,13 @@ function check_layers(layers, ht){
 				check_layers(sublayers, ht);
 			}
 		}
-
+		if(!layer.hasFixedLeft() && layer.hasFixedRight()) {
+			layer.hasFixedRight = 0;
+			layer.hasFixedLeft = 1;
+		} else if (layer.hasFixedLeft() && !layer.hasFixedRight()) {
+			layer.hasFixedLeft = 0;
+			layer.hasFixedRight = 1;
+		}
 		[layer select:false byExpandingSelection:true]
 
 	}
@@ -218,10 +225,13 @@ function rtl_font(layer, ht) {
   ifht["MaterialIcons-Regular"] = true;
 
   //Set the text alignment to right
-  layer.setTextAlignment(1);
+  if(layer.textAlignment() == 0  || layer.textAlignment() == 4){
+  	layer.setTextAlignment(1);
+  } else if(layer.textAlignment() == 1){
+  	layer.setTextAlignment(0);
+  }
 
   var layerValue = String(layer.stringValue());
-
   	//Check icon against list of known icons which should be flipped
     if (ifht[fontPS]) {
       if(ht[layerValue]) {
@@ -256,7 +266,7 @@ function check_if_artboard(layer){
   
 	var layerClass = layer.class();
 
-	if(layerClass == "MSArtboardGroup") {
+	if(layerClass == "MSArtboardGroup" || "MSSymbolMaster") {
 		return true;
 	} else {
 		return false;

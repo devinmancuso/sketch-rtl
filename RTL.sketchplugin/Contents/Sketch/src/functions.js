@@ -114,8 +114,16 @@ function check_layers(layers, ht){
 		var artX = artboardFrame.x();
 		var artW = artboardFrame.width();
 
-		if (layerClass == "MSShapeGroup" || layerClass == "MSRectangleShape" || layerClass == "MSOvalShape") {
-		  
+		if (layerClass == "MSShapeGroup" || 
+			layerClass == "MSRectangleShape" || 
+			layerClass == "MSOvalShape" || 
+			layerClass == "MSTriangleShape" ||
+			layerClass == "MSShapePathLayer" ||			
+			layerClass == "MSStarShape" ||
+			layerClass == "MSPolygonShape" ||
+			layerClass == "MSHotspotLayer" ||
+			layerClass == "MSSliceLayer") {
+
 			//log("Found layer " + layerName + " of class: " + layerClass)
 			rtl_move(layer, artX, artW);
 
@@ -171,8 +179,8 @@ function check_layers(layers, ht){
 			layer.hasFixedLeft = 0;
 			layer.hasFixedRight = 1;
 		}
-		[layer select:false byExpandingSelection:true]
-
+		//[layer select:false byExpandingSelection:true] //Now deprecated
+		[layer select:false byExtendingSelection:true]
 	}
 }//END check_layers
 
